@@ -1,0 +1,24 @@
+{% extends 'basis.html' %}
+
+{% block title %}
+LogIn
+{% endblock %}
+
+{% block content %}
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+<!--    <h1>Вход</h1>-->
+<!--    <p>{{users}}</p>-->
+<!--&lt;!&ndash;    <p>{{form}}</p>&ndash;&gt;-->
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        {{ form.login }} <br>-->
+<!--        {{ form.password }} <br>-->
+<!--        <button type="submit">Войти</button>-->
+<!--    </form>-->
+<!--    <span>{{ error }}</span>-->
+{% endblock %}
